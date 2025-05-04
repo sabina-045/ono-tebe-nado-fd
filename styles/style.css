@@ -3,45 +3,36 @@ ul li {
   list-style-type: none;
 }
 
-h1 {
+.title__h1 {
   color: rgba(255, 255, 255, 1);
   font-weight: 700;
   font-size: 100px;
-  line-height: 115px;
+  line-height: 1.15;
   letter-spacing: 0.3em;
 }
 
-h2 {
+.title__h2 {
   font-weight: 700;
   font-size: 40px;
   line-height: 47px;
 }
 
-h3 {
+.title__h3 {
   color: rgba(255, 255, 255, 1);
 }
 
-p {
-  color: rgba(0, 0, 0, 1);
-}
-
 .font__header-footer {
+  font-weight: 400;
   font-size: 18px;
 }
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  inset: 0;
+  z-index: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-}
-
-.black__link-underline {
-  border-bottom: 1px solid rgba(0, 0, 0, 1);
-  text-decoration: none;
 }
 
 .header {
@@ -54,17 +45,30 @@ p {
 .header__menu {
   justify-self: start;
   width: 391.48px;
-  height: 22px;
 }
 
 .header__links-list {
   display: flex;
-  gap: 34px;
+  justify-content: space-between;
+  gap: 3px;
 }
 
 .header__links-list-item {
   display: list-item;
   list-style: circle;
+}
+
+.header__links-list-item_no-bullit {
+  list-style: none;
+}
+
+.link__header-footer {
+  color: rgba(0, 0, 0, 1);
+  text-decoration: none;
+}
+
+.link_active__header-footer {
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
 }
 
 .header_logo {
@@ -80,7 +84,6 @@ p {
 .address {
   width: 240px;
   max-width: 240px;
-  height: 98px;
   font-style: normal;
   line-height: 24.3px;
 }
@@ -92,7 +95,6 @@ p {
 .cover {
   position: relative;
   width: 1100px;
-  height: 757px;
   margin-bottom: 180px;
   background-image: url("../images/cover.jpg");
   background-repeat: no-repeat;
@@ -101,17 +103,18 @@ p {
 }
 
 .cover_title {
+  position: relative;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
-  width: 1000px;
-  height: 385px;
-  margin: 165px 50px 207px;
+  padding: 165px 50px 106px;
+  text-transform: uppercase;
 }
 
 .aligned-text {
   align-self: start;
-  width: 286px;
+  width: 100%;
+  max-width: 286px;
 }
 
 .aligned-text_center {
@@ -125,35 +128,29 @@ p {
 }
 
 .cover__description {
-  position: absolute;
-  bottom: 50px;
-  left: 50px;
+  position: relative;
   display: flex;
   flex-direction: row;
-  column-gap: 104px;
-  width: 1000px;
-  height: 51px;
+  column-gap: 108px;
+  width: 1100px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
 }
 
 .cover__text {
   align-self: center;
+  padding-top: 12px;
+  padding-bottom: 11px;
   color: rgba(255, 255, 255, 1);
   font-size: 22px;
-  line-height: 28px;
   text-transform: uppercase;
 }
 
 .cover__description-text {
   justify-self: stretch;
-  word-spacing: 19px;
-}
-
-.cover__button-text {
-  font-weight: 500;
-  text-align: center;
-  text-transform: uppercase;
-  word-spacing: 1px;
-  text-wrap: nowrap;
+  line-height: 27px;
+  word-spacing: 18px;
 }
 
 .bet-button {
@@ -163,7 +160,13 @@ p {
   border: 1px solid rgba(255, 255, 255, 1);
   padding: 0px;
   padding: 12px 32px 11px 31px;
+  font-weight: 500;
+  line-height: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  word-spacing: 1px;
   background: none;
+  text-wrap: nowrap;
 }
 
 .lots {
@@ -172,16 +175,13 @@ p {
   justify-items: center;
   row-gap: 27px;
   width: 1052px;
-  height: 723px;
-  margin-right: 24px;
-  margin-bottom: 155px;
-  margin-left: 24px;
+  margin: 0px 24px 155px;
 }
 
 .lots__heading {
   width: 121px;
-  height: 47px;
   padding-left: 40px;
+  text-transform: uppercase;
 }
 
 .lots__card-list {
@@ -189,6 +189,7 @@ p {
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: center;
+  gap: 1rem;
 }
 
 .lots__card-list-item {
@@ -197,13 +198,10 @@ p {
   min-height: 596px;
   color: rgba(255, 255, 255, 1);
   line-height: 120%;
+  line-height: normal;
 }
 
 .card-link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
   width: 100%;
   height: 100%;
 }
@@ -212,34 +210,28 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 334;
-  height: 596;
+  width: 100%;
+  height: 100%;
   padding: 48px 40px;
-  line-height: normal;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .card_type_film {
   background-image: url("../images/card-lot-01.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .card_type_book {
   background-image: url("../images/card-lot-02.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .card_type_picture {
   background-image: url("../images/card-lot-03.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .card__title{
+  position: relative;
   font-weight: 700;
   font-size: 22px;
   text-decoration: underline;
@@ -248,18 +240,19 @@ p {
 }
 
 .card__text {
+  position: relative;
   font-size: 20px;
   line-height: 120%;
 }
 
 .lots__look-more-link {
+  margin-right: 820px;
+  margin-left: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
   padding-top: 5px;
-  padding-left: 40px;
   font-weight: 400;
   font-size: 20px;
-  font-size: 20px;
   line-height: 100%;
-  letter-spacing: 0%;
 }
 
 .about {
@@ -275,7 +268,6 @@ p {
 }
 
 .about__logo {
-  top: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -298,6 +290,7 @@ p {
   font-weight: 700;
   font-size: 40px;
   line-height: 46.96px;
+  text-transform: uppercase;
 }
 
 .about__text {
@@ -308,18 +301,12 @@ p {
   line-height: 24px;
 }
 
-.about__text_padding_bottom {
-  padding-bottom: 24px;
-}
-
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
   width: 1100px;
-  height: 180px;
-  padding-right: 50px;
-  padding-left: 50px;
+  padding: 0px 50px 82px;
 }
 
 .footer__address {
@@ -329,7 +316,6 @@ p {
 .footer__menu {
   justify-self: center;
   width: 164px;
-  height: 64px;
   text-align: center;
 }
 
@@ -343,17 +329,14 @@ p {
   justify-self: end;
   justify-content: space-between;
   width: 240px;
-  height: 48px;
 }
 
 .footer__social-link {
   display: block;
   width: 48px;
-  height: 48px;
 }
 
 .footer__social-icon {
   width: 48px;
   height: 48px;
-  border-width: 1px;
 }
